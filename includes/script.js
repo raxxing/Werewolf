@@ -1,30 +1,34 @@
-const modals = document.querySelectorAll(".modal");
+document.addEventListener("DOMContentLoaded", () => {
 
-modals.forEach(modal => {
+    const modals = document.querySelectorAll(".modal");
 
-    const minusBtn = modal.querySelector(".minus");
-    const plusBtn = modal.querySelector(".plus");
-    const numberDisplay = modal.querySelector(".number-display");
+    modals.forEach(modal => {
 
-    let count = 0;
+        const minusBtn = modal.querySelector(".minus");
+        const plusBtn = modal.querySelector(".plus");
+        const numberDisplay = modal.querySelector(".number-display");
 
+        let count = 0;
 
-    // Minus button
-    minusBtn.addEventListener("click", () => {
+        // Plus
+        plusBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
 
-        if (count > 0) {
-            count--;
+            count++;
             numberDisplay.textContent = count;
-        }
+        });
 
-    });
+        // Minus
+        minusBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
 
-
-    // Plus button
-    plusBtn.addEventListener("click", () => {
-
-        count++;
-        numberDisplay.textContent = count;
+            if (count > 0) {
+                count--;
+                numberDisplay.textContent = count;
+            }
+        });
 
     });
 
