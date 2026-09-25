@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Werewolf</title>
+		<link rel="stylesheet" href="includes/styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Werewolf</h1>
+		</header>
+		
+		<main>
+			<section>
+				<h2>Select a Role</h2>
+
+				<button class="role-btn" data-modal="card-wolf">
+					Werewolf
+				</button>
+
+				<button class="role-btn" data-modal="card-seer">
+					Seer
+				</button>
+			</section>
+
+
+			<!-- Werewolf Card -->
+			<div id="card-wolf" class="card-open">
+
+				<div class="card-content">
+					<h2>Werewolf</h2>
+					<p>
+						Each night, wake with the other Werewolves
+						and choose a player to eliminate.
+					</p>
+					<div class="counter-container">
+						<button class="num minus">-</button>
+						<div class="number-display">0</div>
+						<button class="num plus">+</button>
+					</div>
+					<button class="card-close" style="margin-top:20px;">
+						OK
+					</button>
+				</div>
+			</div>
+			
+			<!-- Seer Card -->
+			<div id="card-seer" class="card-open">
+
+				<div class="card-content">
+					<h2>Seer</h2>
+					<p>
+						Each night choose a player to learn
+						if he is a Villager or a Werewolf.
+					</p>
+					<div class="counter-container">
+						<button class="num minus">-</button>
+						<div class="number-display">0</div>
+						<button class="num plus">+</button>
+					</div>
+					<button class="card-close" style="margin-top:20px;">
+						OK
+					</button>
+				</div>
+			</div>
+
+		</main>
+		
+		<script src="includes/script.js"></script>
+		
+		<footer>		
+		</footer>
+	
+	</body>
+</html>
